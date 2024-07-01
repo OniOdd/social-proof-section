@@ -2,7 +2,11 @@
 
 @function rem($value) {
   @if math.is-unitless($value) {
-    @return math.div(math.round(math.div($value, 16) * 1000), 1000) + rem;
+    $remValue: math.div($value, 16);
+    $round: math.round($remValue * 1000);
+    $result: math.div($round, 1000);
+
+    @return #{$result}rem;
   } @else {
     @error "Hey, don't use units when using the rem() function!";
   }
