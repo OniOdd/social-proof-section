@@ -11,3 +11,92 @@
     @error "Hey, don't use units when using the rem() function!";
   }
 }
+
+@function em($value1, $value2: 16) {
+  @if math.is-unitless($value1) and math.is-unitless($value2) {
+    $emValue: math.div($value1, $value2);
+    $round: math.round($emValue * 1000);
+    $result: math.div($round, 1000);
+
+    @return #{$result}em;
+  } @else {
+    @error "Hey, don't use units when using the em() function!";
+  }
+}
+
+@function px($value) {
+  @if math.is-unitless($value) {
+    $pxValue: $value * 16;
+    $round: math.round($pxValue * 1000);
+    $result: math.div($round, 1000);
+
+    @return #{$result}px;
+  } @else {
+    @error "Hey, don't use units when using the px() function!";
+  }
+}
+
+// Clamp builder for rem
+@function clampRem($minWidthPx, $maxWidthPx, $minFontSizePx, $maxFontSizePx) {
+  @if math.is-unitless($minWidthPx) and
+    math.is-unitless($maxWidthPx) and
+    math.is-unitless($minFontSizePx) and
+    math.is-unitless($maxFontSizePx)
+  {
+    $minWidth: math.div($minWidthPx, 16);
+    $maxWidth: math.div($maxWidthPx, 16);
+
+    $minFontSizeRem: math.div($minFontSizePx, 16);
+    $maxFontSizeRem: math.div($maxFontSizePx, 16);
+
+    $slope: math.div($maxFontSizeRem - $minFontSizeRem, $maxWidth - $minWidth);
+    $yAxisIntersection: (-$minWidth * $slope) + $minFontSizeRem;
+    $slopeRound: math.div(math.round(($slope * 100) * 1000), 1000);
+    $preferredValue: "#{px($yAxisIntersection)} + #{$slopeRound}vw";
+
+    @return clamp(
+      #{$minFontSizeRem}rem,
+      #{$preferredValue},
+      #{$maxFontSizeRem}rem
+    );
+  } @else {
+    @error "Hey, don't use units when using the clampRem() function!";
+  }
+}
+
+// Clamp builder for px
+@function clampPx($minWidthPx, $maxWidthPx, $minFontSizePx, $maxFontSizePx) {
+  @if math.is-unitless($minWidthPx) and
+    math.is-unitless($maxWidthPx) and
+    math.is-unitless($minFontSizePx) and
+    math.is-unitless($maxFontSizePx)
+  {
+    $minWidth: math.div($minWidthPx, 16);
+    $maxWidth: math.div($maxWidthPx, 16);
+
+    $minFontSizeRem: math.div($minFontSizePx, 16);
+    $maxFontSizeRem: math.div($maxFontSizePx, 16);
+
+    $slope: math.div($maxFontSizeRem - $minFontSizeRem, $maxWidth - $minWidth);
+    $yAxisIntersection: (-$minWidth * $slope) + $minFontSizeRem;
+    $slopeRound: math.div(math.round(($slope * 100) * 1000), 1000);
+    $preferredValue: "#{px($yAxisIntersection)} + #{$slopeRound}vw";
+
+    @return clamp(#{$minFontSizePx}px, #{$preferredValue}, #{$maxFontSizePx}px);
+  } @else {
+    @error "Hey, don't use units when using the clampPx() function!";
+  }
+}
+
+// letter-spacing - % to em
+@function lsEm($percentage, $fontSize) {
+  @if math.is-unitless($percentage) and math.is-unitless($fontSize) {
+    $div: math.div($percentage, 100);
+    $divRound: math.div(math.round($div * 1000), 1000);
+    $result: $divRound * $fontSize;
+
+    @return #{$result}em;
+  } @else {
+    @error "Hey, don't use units when using the lsEm() function!";
+  }
+}
