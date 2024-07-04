@@ -47,4 +47,27 @@ img {
   min-block-size: 100vh;
   margin-inline: auto;
   padding-block: clamp(82px, 69.324px + 3.38vw, 118px) clamp(99px, 98.648px + 0.094vw, 100px);
+}
+
+.testimonials-section__header {
+  text-align: center;
+}
+
+.testimonials-section__title {
+  margin-block-end: clamp(1.4375rem, 21.944px + 0.282vw, 1.625rem);
+  font-size: clamp(2.3125rem, 31.718px + 1.408vw, 3.25rem);
+  font-weight: 700;
+  line-height: 0.86;
+  color: hsl(300, 43%, 22%);
+}
+@media (min-width: 1440px) {
+  .testimonials-section__title {
+    line-height: 0.92;
+  }
+}
+
+.testimonials-section__description {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  letter-spacing: -0.036em;
 }/*# sourceMappingURL=styles.css.map */
