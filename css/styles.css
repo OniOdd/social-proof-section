@@ -75,4 +75,34 @@ img {
 
 .testimonials-section__reviews-container {
   margin-block-end: 49px;
+}
+
+.review {
+  max-inline-size: 445px;
+  padding: clamp(1rem, 15.296px + 0.188vw, 1.125rem) clamp(1rem, 15.296px + 0.188vw, 1.125rem) clamp(0.8125rem, 11.239px + 0.469vw, 1.125rem);
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 8px;
+}
+.review:not(:last-child) {
+  margin-block-end: 16px;
+}
+.review__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.813rem;
+}
+.review__stars-wrapper {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.review__star {
+  inline-size: 17px;
+  block-size: 16px;
+}
+.review__caption {
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  text-align: center;
 }/*# sourceMappingURL=styles.css.map */
