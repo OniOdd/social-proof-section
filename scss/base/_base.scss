@@ -1,5 +1,49 @@
 @use "../abstracts" as a;
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
 body {
   font-family: "League Spartan", sans-serif;
+  font-size: a.rem(17);
+  font-weight: 400;
+  line-height: 1.2;
+  color: a.$darkGrayishMagenta;
+  background-color: a.$white;
+  background-image: url("../assets/images/backgrounds/bg-pattern-top-mobile.svg"),
+    url("../assets/images/backgrounds/bg-pattern-bottom-mobile.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: 576px) {
+    background-image: url("../assets/images/backgrounds/bg-pattern-top-desktop.svg"),
+      url("../assets/images/backgrounds/bg-pattern-bottom-desktop.svg");
+    background-size: auto;
+  }
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+// Main page
+
+.wrapper {
+  inline-size: min(100% - 48px, 1440px);
+  min-block-size: 100vh;
+  margin-inline: auto;
+  padding-block: a.clampPx(375, 1440, 82, 118) a.clampPx(375, 1440, 99, 100);
 }

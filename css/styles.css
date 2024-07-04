@@ -4,6 +4,47 @@
   src: url("../assets/fonts/LeagueSpartan-VariableFont_wght.woff2") format("woff2"), url("../assets/fonts/LeagueSpartan-VariableFont_wght.woff") format("woff");
   font-style: normal;
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+}
+
 body {
   font-family: "League Spartan", sans-serif;
+  font-size: 1.063rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: hsl(303, 10%, 53%);
+  background-color: hsl(0, 0%, 100%);
+  background-image: url("../assets/images/backgrounds/bg-pattern-top-mobile.svg"), url("../assets/images/backgrounds/bg-pattern-bottom-mobile.svg");
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+@media (min-width: 576px) {
+  body {
+    background-image: url("../assets/images/backgrounds/bg-pattern-top-desktop.svg"), url("../assets/images/backgrounds/bg-pattern-bottom-desktop.svg");
+    background-size: auto;
+  }
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+.wrapper {
+  inline-size: min(100% - 48px, 1440px);
+  min-block-size: 100vh;
+  margin-inline: auto;
+  padding-block: clamp(82px, 69.324px + 3.38vw, 118px) clamp(99px, 98.648px + 0.094vw, 100px);
 }/*# sourceMappingURL=styles.css.map */
