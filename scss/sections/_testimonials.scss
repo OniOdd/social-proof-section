@@ -1,31 +1,30 @@
 @use "../abstracts" as a;
 
 .testimonials-section {
-}
-
-.testimonials-section__header {
-  margin-block-end: 39px;
-  text-align: center;
-}
-
-.testimonials-section__title {
-  margin-block-end: a.clampRem(375, 1440, 23, 26);
-  font-size: a.clampRem(375, 1440, 37, 52);
-  font-weight: 700;
-  line-height: 0.86;
-  color: a.$veryDarkMagenta;
-
-  @media (min-width: 1440px) {
-    line-height: 0.92;
+  &__header {
+    margin-block-end: 39px;
+    text-align: center;
   }
-}
 
-.testimonials-section__description {
-  font-size: a.rem(18);
-  line-height: 1.4;
-  letter-spacing: a.lsEm(-0.2, 18);
-}
+  &__title {
+    margin-block-end: a.clampRem(375, 1440, 23, 26);
+    font-size: a.clampRem(375, 1440, 37, 52);
+    font-weight: 700;
+    line-height: 0.86;
+    color: a.$veryDarkMagenta;
 
-.testimonials-section__reviews-container {
-  margin-block-end: 49px;
+    @media (min-width: 1440px) {
+      line-height: 0.92;
+    }
+  }
+
+  &__description {
+    font-size: a.rem(18);
+    line-height: 1.4;
+    letter-spacing: a.lsEm(-0.2);
+  }
+
+  &__reviews-container {
+    margin-block-end: 49px;
+  }
 }

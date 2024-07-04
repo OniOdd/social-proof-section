@@ -53,7 +53,6 @@ img {
   margin-block-end: 39px;
   text-align: center;
 }
-
 .testimonials-section__title {
   margin-block-end: clamp(1.4375rem, 21.944px + 0.282vw, 1.625rem);
   font-size: clamp(2.3125rem, 31.718px + 1.408vw, 3.25rem);
@@ -66,13 +65,11 @@ img {
     line-height: 0.92;
   }
 }
-
 .testimonials-section__description {
   font-size: 1.125rem;
   line-height: 1.4;
-  letter-spacing: -0.036em;
+  letter-spacing: -0.002em;
 }
-
 .testimonials-section__reviews-container {
   margin-block-end: 49px;
 }
