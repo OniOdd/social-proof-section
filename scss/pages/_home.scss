@@ -1,0 +1,8 @@
+@use "../abstracts" as a;
+
+.wrapper {
+  inline-size: min(100% - 48px, 1440px);
+  min-block-size: 100vh;
+  margin-inline: auto;
+  padding-block: a.clampPx(375, 1440, 82, 118) a.clampPx(375, 1440, 99, 100);
+}

@@ -38,39 +38,3 @@ img {
   display: block;
   max-inline-size: 100%;
 }
-
-// Main page
-
-.wrapper {
-  inline-size: min(100% - 48px, 1440px);
-  min-block-size: 100vh;
-  margin-inline: auto;
-  padding-block: a.clampPx(375, 1440, 82, 118) a.clampPx(375, 1440, 99, 100);
-}
-
-// Section testimonials
-
-.testimonials-section {
-}
-
-.testimonials-section__header {
-  text-align: center;
-}
-
-.testimonials-section__title {
-  margin-block-end: a.clampRem(375, 1440, 23, 26);
-  font-size: a.clampRem(375, 1440, 37, 52);
-  font-weight: 700;
-  line-height: 0.86;
-  color: a.$veryDarkMagenta;
-
-  @media (min-width: 1440px) {
-    line-height: 0.92;
-  }
-}
-
-.testimonials-section__description {
-  font-size: a.rem(18);
-  line-height: 1.4;
-  letter-spacing: a.lsEm(-0.2, 18);
-}

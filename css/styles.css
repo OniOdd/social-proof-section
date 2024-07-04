@@ -50,6 +50,7 @@ img {
 }
 
 .testimonials-section__header {
+  margin-block-end: 39px;
   text-align: center;
 }
 
@@ -70,4 +71,8 @@ img {
   font-size: 1.125rem;
   line-height: 1.4;
   letter-spacing: -0.036em;
+}
+
+.testimonials-section__reviews-container {
+  margin-block-end: 49px;
 }/*# sourceMappingURL=styles.css.map */
