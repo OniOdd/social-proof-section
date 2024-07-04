@@ -89,11 +89,11 @@
 }
 
 // letter-spacing - % to em
-@function lsEm($percentage, $fontSize) {
-  @if math.is-unitless($percentage) and math.is-unitless($fontSize) {
+@function lsEm($percentage, $fontSizePx) {
+  @if math.is-unitless($percentage) and math.is-unitless($fontSizePx) {
     $div: math.div($percentage, 100);
     $divRound: math.div(math.round($div * 1000), 1000);
-    $result: $divRound * $fontSize;
+    $result: $divRound * $fontSizePx;
 
     @return #{$result}em;
   } @else {
