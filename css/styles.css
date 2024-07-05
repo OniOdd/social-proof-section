@@ -146,8 +146,9 @@ img {
 .review__content {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  row-gap: 0.813rem;
+  row-gap: 13px;
 }
 @media (min-width: 992px) {
   .review__content {

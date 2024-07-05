@@ -21,8 +21,9 @@
   &__content {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    row-gap: a.rem(13);
+    row-gap: 13px;
 
     @media (min-width: 992px) {
       flex-direction: row;
