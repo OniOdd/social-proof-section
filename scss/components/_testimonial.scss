@@ -1,0 +1,55 @@
+@use "../abstracts" as a;
+
+.testimonial {
+  max-inline-size: 350px;
+  padding: 40px 33px a.clampPx(375, 1440, 31, 39) 32px;
+  background-color: a.$veryDarkMagenta;
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    column-gap: a.rem(23);
+    margin-block-end: a.rem(26);
+  }
+
+  &__avatar-wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__avatar {
+    inline-size: a.rem(40);
+    block-size: a.rem(40);
+  }
+
+  &__person-info {
+    text-transform: capitalize;
+  }
+
+  &__name {
+    font-weight: 700;
+    letter-spacing: a.lsEm(-0.2);
+    color: a.$white;
+  }
+
+  &__status {
+    letter-spacing: a.lsEm(0.1);
+    color: a.$softPink;
+  }
+
+  &__quote {
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: a.lsEm(-1.9);
+    color: a.$white;
+  }
+
+  &__quote::before {
+    content: open-quote;
+  }
+
+  &__quote::after {
+    content: close-quote;
+  }
+}

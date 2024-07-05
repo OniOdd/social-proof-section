@@ -27,4 +27,11 @@
   &__reviews-container {
     margin-block-end: 49px;
   }
+
+  &__testimonials {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px 30px;
+  }
 }

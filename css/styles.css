@@ -73,6 +73,12 @@ img {
 .testimonials-section__reviews-container {
   margin-block-end: 49px;
 }
+.testimonials-section__testimonials {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+}
 
 .review {
   max-inline-size: 445px;
@@ -102,4 +108,50 @@ img {
   font-weight: 700;
   color: hsl(300, 43%, 22%);
   text-align: center;
+}
+
+.testimonial {
+  max-inline-size: 350px;
+  padding: 40px 33px clamp(31px, 28.183px + 0.751vw, 39px) 32px;
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 8px;
+}
+.testimonial__header {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 1.438rem;
+       column-gap: 1.438rem;
+  margin-block-end: 1.625rem;
+}
+.testimonial__avatar-wrapper {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial__avatar {
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+}
+.testimonial__person-info {
+  text-transform: capitalize;
+}
+.testimonial__name {
+  font-weight: 700;
+  letter-spacing: -0.002em;
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__status {
+  letter-spacing: 0.001em;
+  color: hsl(333, 80%, 67%);
+}
+.testimonial__quote {
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.019em;
+  color: hsl(0, 0%, 100%);
+}
+.testimonial__quote::before {
+  content: open-quote;
+}
+.testimonial__quote::after {
+  content: close-quote;
 }/*# sourceMappingURL=styles.css.map */
