@@ -32,12 +32,14 @@
 
   &__stars-wrapper {
     display: flex;
-    column-gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__star {
-    inline-size: 17px;
-    block-size: 16px;
+    inline-size: a.rem(17);
+    block-size: a.rem(16);
   }
 
   &__caption {

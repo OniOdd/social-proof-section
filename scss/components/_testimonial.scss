@@ -19,8 +19,9 @@
 
   &__header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    column-gap: a.rem(23);
+    gap: 23px;
     margin-block-end: a.rem(26);
   }
 

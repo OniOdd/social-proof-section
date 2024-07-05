@@ -158,12 +158,13 @@ img {
 }
 .review__stars-wrapper {
   display: flex;
-  -moz-column-gap: 8px;
-       column-gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 .review__star {
-  inline-size: 17px;
-  block-size: 16px;
+  inline-size: 1.063rem;
+  block-size: 1rem;
 }
 .review__caption {
   font-weight: 700;
@@ -188,9 +189,9 @@ img {
 }
 .testimonial__header {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  -moz-column-gap: 1.438rem;
-       column-gap: 1.438rem;
+  gap: 23px;
   margin-block-end: 1.625rem;
 }
 .testimonial__avatar-wrapper {
