@@ -1,15 +1,12 @@
 @use "../abstracts" as a;
 
 .review {
+  inline-size: 100%;
   max-inline-size: 445px;
   padding: a.clampRem(375, 1440, 16, 18) a.clampRem(375, 1440, 16, 18)
     a.clampRem(375, 1440, 13, 18);
   background-color: a.$lightGrayishMagenta;
   border-radius: 8px;
-
-  &:not(:last-child) {
-    margin-block-end: 16px;
-  }
 
   &__content {
     display: flex;

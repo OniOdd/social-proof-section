@@ -49,7 +49,14 @@ img {
   padding-block: clamp(82px, 69.324px + 3.38vw, 118px) clamp(99px, 98.648px + 0.094vw, 100px);
 }
 
+.testimonials-section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+}
 .testimonials-section__header {
+  max-inline-size: 410px;
   margin-block-end: 39px;
   text-align: center;
 }
@@ -71,23 +78,32 @@ img {
   letter-spacing: -0.002em;
 }
 .testimonials-section__reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+  inline-size: 100%;
   margin-block-end: 49px;
 }
 .testimonials-section__testimonials {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 16px 30px;
+  gap: 16px clamp(16px, 0px + 2.083vw, 30px);
+}
+@media (min-width: 768px) {
+  .testimonials-section__testimonials {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .review {
+  inline-size: 100%;
   max-inline-size: 445px;
   padding: clamp(1rem, 15.296px + 0.188vw, 1.125rem) clamp(1rem, 15.296px + 0.188vw, 1.125rem) clamp(0.8125rem, 11.239px + 0.469vw, 1.125rem);
   background-color: hsl(300, 24%, 96%);
   border-radius: 8px;
-}
-.review:not(:last-child) {
-  margin-block-end: 16px;
 }
 .review__content {
   display: flex;
@@ -111,6 +127,7 @@ img {
 }
 
 .testimonial {
+  inline-size: 100%;
   max-inline-size: 350px;
   padding: 40px 33px clamp(31px, 28.183px + 0.751vw, 39px) 32px;
   background-color: hsl(300, 43%, 22%);

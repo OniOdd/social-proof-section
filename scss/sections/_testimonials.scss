@@ -1,7 +1,13 @@
 @use "../abstracts" as a;
 
 .testimonials-section {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+
   &__header {
+    max-inline-size: 410px;
     margin-block-end: 39px;
     text-align: center;
   }
@@ -25,6 +31,11 @@
   }
 
   &__reviews-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+    inline-size: 100%;
     margin-block-end: 49px;
   }
 
@@ -32,6 +43,11 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 16px 30px;
+    gap: 16px a.clampPx(768, 1440, 16, 30);
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }

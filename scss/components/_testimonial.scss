@@ -1,6 +1,7 @@
 @use "../abstracts" as a;
 
 .testimonial {
+  inline-size: 100%;
   max-inline-size: 350px;
   padding: 40px 33px a.clampPx(375, 1440, 31, 39) 32px;
   background-color: a.$veryDarkMagenta;
