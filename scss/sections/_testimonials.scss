@@ -6,10 +6,26 @@
   grid-template-rows: repeat(3, auto);
   justify-items: center;
 
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "header reviews"
+      "testimonials testimonials";
+    justify-items: start;
+    row-gap: 71px;
+  }
+
   &__header {
     max-inline-size: 410px;
     margin-block-end: 39px;
     text-align: center;
+
+    @media (min-width: 992px) {
+      grid-area: header;
+      margin-block-end: 0;
+      text-align: start;
+    }
   }
 
   &__title {
@@ -37,17 +53,29 @@
     row-gap: 16px;
     inline-size: 100%;
     margin-block-end: 49px;
+
+    @media (min-width: 992px) {
+      grid-area: reviews;
+      align-items: flex-end;
+      margin-block-end: 0;
+    }
   }
 
   &__testimonials {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: flex-start;
     gap: 16px a.clampPx(768, 1440, 16, 30);
 
     @media (min-width: 768px) {
       flex-direction: row;
       justify-content: center;
+    }
+
+    @media (min-width: 992px) {
+      grid-area: testimonials;
+      justify-self: center;
     }
   }
 }

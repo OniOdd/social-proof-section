@@ -7,6 +7,16 @@
   background-color: a.$veryDarkMagenta;
   border-radius: 8px;
 
+  @media (min-width: 1146px) {
+    &:nth-child(2) {
+      margin-block-start: 16px;
+    }
+
+    &:nth-child(3) {
+      margin-block-start: 32px;
+    }
+  }
+
   &__header {
     display: flex;
     align-items: center;

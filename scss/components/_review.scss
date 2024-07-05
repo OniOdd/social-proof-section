@@ -3,16 +3,31 @@
 .review {
   inline-size: 100%;
   max-inline-size: 445px;
-  padding: a.clampRem(375, 1440, 16, 18) a.clampRem(375, 1440, 16, 18)
+  padding: a.clampRem(375, 1440, 16, 18) a.clampRem(375, 1440, 16, 32)
     a.clampRem(375, 1440, 13, 18);
   background-color: a.$lightGrayishMagenta;
   border-radius: 8px;
+
+  @media (min-width: 992px) {
+    &:nth-child(1) {
+      margin-inline-end: a.clampPx(992, 1440, 20, 95);
+    }
+
+    &:nth-child(2) {
+      margin-inline-end: a.clampPx(992, 1440, 10, 47);
+    }
+  }
 
   &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: a.rem(13);
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      column-gap: 32px;
+    }
   }
 
   &__stars-wrapper {
